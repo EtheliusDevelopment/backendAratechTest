@@ -5,7 +5,7 @@ var morgan = require('morgan')
 
 
 
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 app.use(cors());
 app.use(express.json())
@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 
 app.use('/radar', require('./routes/radar'))
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
 
 
